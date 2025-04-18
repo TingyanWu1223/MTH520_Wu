@@ -13,7 +13,10 @@ def prob1(L):
     """Return the minimum, maximum, and average of the entries of L
     (in that order, separated by a comma).
     """
-    raise NotImplementedError("Problem 1 Incomplete")
+    minL = min(L)
+    maxL = max(L)
+    avgL = sum(L) / len(L)
+    return minL, maxL, avgL
 
 
 # Problem 2
@@ -21,7 +24,50 @@ def prob2():
     """Determine which Python objects are mutable and which are immutable.
     Test integers, strings, lists, tuples, and sets. Print your results.
     """
-    raise NotImplementedError("Problem 2 Incomplete")
+    # int
+    a = 10
+    old_id = id(a)
+    a = a + 1
+    if id(a) == old_id:
+        print("int: mutable")
+    else:
+        print("int: immutable")
+
+    # str
+    s = "hello"
+    old_id = id(s)
+    s = s + "!"
+    if id(s) == old_id:
+        print("str: mutable")
+    else:
+        print("str: immutable")
+
+    # list
+    lst = [1, 2, 3]
+    lst_id = id(lst)
+    lst.append(4)
+    if id(lst) == lst_id:
+        print("list: mutable")
+    else:
+        print("list: immutable")
+
+    # tuple
+    t = (1, 2, 3)
+    old_id = id(t)
+    t = t + (4,)
+    if id(t) == old_id:
+        print("tuple: mutable")
+    else:
+        print("tuple: immutable")
+
+    # set
+    st = {1, 2, 3}
+    st_id = id(st)
+    st.add(4)
+    if id(st) == st_id:
+        print("set: mutable")
+    else:
+        print("set: immutable")
 
 
 # Problem 3
@@ -36,7 +82,9 @@ def hypot(a, b):
     Returns:
         The length of the triangle's hypotenuse.
     """
-    raise NotImplementedError("Problem 3 Incomplete")
+    from calculator import sum, product, sqrt
+    
+    return sqrt(sum(product(a, a), product(b, b)))
 
 
 # Problem 4
@@ -49,10 +97,23 @@ def power_set(A):
     Returns:
         (list(sets)): The power set of A as a list of sets.
     """
-    raise NotImplementedError("Problem 4 Incomplete")
+    from itertools import combinations
+
+    result = []
+    for i in range(len(A) + 1):
+        for subset in combinations(A, i):
+            result.append(set(subset))
+    return result
 
 
 # Problem 5: Implement shut the box.
 def shut_the_box(player, timelimit):
     """Play a single game of shut the box."""
     raise NotImplementedError("Problem 5 Incomplete")
+
+
+if __name__ == "__main__":
+    print(prob1([1,2,3,4,5]))
+    prob2()
+    print(hypot(3, 4))
+    print(power_set("ABC"))

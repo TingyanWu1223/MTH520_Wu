@@ -6,6 +6,7 @@
 """
 
 from math import sqrt
+import calculator
 
 
 # Problem 1
@@ -82,7 +83,6 @@ def hypot(a, b):
     Returns:
         The length of the triangle's hypotenuse.
     """
-    from calculator import sum, product, sqrt
     
     return sqrt(sum(product(a, a), product(b, b)))
 

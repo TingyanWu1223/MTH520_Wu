@@ -1,0 +1,52 @@
+04/25/25 19:51
+
+Problem 2 (5 points):
+Score += 5
+
+Problem 3 (5 points):
+isolate() failed
+Score += 4
+
+Problem 4 (10 points):
+NotImplementedError: first_half() returned nothing
+
+Problem 5 (5 points):
+Score += 5
+
+Problem 6 (5 points):
+Score += 5
+
+Problem 7 (10 points):
+Score += 10
+
+Problem 8 (5 points):
+Score += 5
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 39/50 = 78.0%
+
+Linter Notes: 
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:29:12: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:29:32: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:29:34: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:29:36: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:42:18: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:43:9: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:57:6: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:77:12: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:77:20: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:77:26: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:77:32: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:79:15: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:82:15: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:83:28: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:132:14: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:132:16: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:132:18: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:132:20: E231 missing whitespace after ','
+
+
+-------------------------------------------------------------------------------
+

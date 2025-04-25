@@ -26,7 +26,8 @@ def isolate(a, b, c, d, e):
     side of b.
     """
    # print("a","    b","     c","d","e")
-    print(a,"     ", b, "     ",c,d,e)
+    print(a,b,c, sep="     ", end=" ")
+    print(d,e)
      
 # Problem 4
 def first_half(my_string):
@@ -43,7 +44,7 @@ def first_half(my_string):
     midd=my_string_len//2
     result = my_string[:midd]
     print(result)
-    #return result
+    return result
 
 def backward(my_string):
     """ Return the reverse of the string 'my_string'.
@@ -131,9 +132,9 @@ if __name__ == "__main__":
     
     isolate(1,2,3,4,5)
     
-    first_half("Hello,Chengdu")
+    first_half("python")
     
-    print(backward("Hello,Chengdu"))
+    print(backward("python"))
     print(list_ops())
     print(pig_latin("banana"))
     print(palindrome())

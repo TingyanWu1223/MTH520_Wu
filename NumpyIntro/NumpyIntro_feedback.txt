@@ -1,0 +1,65 @@
+05/02/25 19:56
+
+Problem 1 (5 points):
+Score += 5
+
+Problem 2 (5 points):
+Score += 5
+
+Problem 3 (5 points):
+prob3() failed
+Score += 1
+
+Problem 4 (5 points):
+Score += 5
+
+Problem 5 (5 points):
+Score += 5
+
+Problem 6 (10 points):
+Score += 10
+
+Problem 7 (10 points):
+NotImplementedError: Problem 7 Incomplete
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 36/50 = 72.0%
+
+Linter Notes: 
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:13:8: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:13:32: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:14:8: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:14:20: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:14:22: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:14:25: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:14:28: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:14:31: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:14:34: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:14:36: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:14:39: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:14:42: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:14:45: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:14:48: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:15:12: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:15:21: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:20:28: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:20:38: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:66:28: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:68:28: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:68:38: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:125:21: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:125:24: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:130:21: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:130:23: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:130:26: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:130:29: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:130:31: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:130:34: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:130:37: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/NumpyIntro/numpy_intro.py:130:39: E231 missing whitespace after ','
+
+
+-------------------------------------------------------------------------------
+

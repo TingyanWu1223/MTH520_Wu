@@ -50,3 +50,86 @@ Linter Notes:
 
 -------------------------------------------------------------------------------
 
+04/25/25 21:09
+
+Problem 2 (5 points):
+Score += 5
+
+Problem 3 (5 points):
+Score += 5
+
+Problem 4 (10 points):
+Score += 10
+
+Problem 5 (5 points):
+Score += 5
+
+Problem 6 (5 points):
+Score += 5
+
+Problem 7 (10 points):
+Score += 10
+
+Problem 8 (5 points):
+Score += 5
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 50/50 = 100.0%
+
+Excellent!
+
+Linter Notes: 
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:29:12: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:29:14: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:30:12: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:43:18: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:44:9: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:58:6: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:78:12: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:78:20: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:78:26: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:78:32: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:80:15: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:83:15: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:84:28: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:133:14: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:133:16: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:133:18: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/TingyanWu/PythonIntro/python_intro.py:133:20: E231 missing whitespace after ','
+
+
+-------------------------------------------------------------------------------
+
+05/02/25 20:43
+
+Problem 2 (5 points):
+Score += 5
+
+Problem 3 (5 points):
+Score += 5
+
+Problem 4 (10 points):
+Score += 10
+
+Problem 5 (5 points):
+Score += 5
+
+Problem 6 (5 points):
+Score += 5
+
+Problem 7 (10 points):
+Score += 10
+
+Problem 8 (10 points):
+Score += 10
+
+Total score: 50/50 = 100.0%
+
+Excellent!
+
+Linter Notes: None
+
+-------------------------------------------------------------------------------
+

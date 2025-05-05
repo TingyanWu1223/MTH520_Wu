@@ -18,3 +18,23 @@ Linter Notes: None
 
 -------------------------------------------------------------------------------
 
+05/05/25 21:13
+
+Problem 1 (15 points):
+Score += 15
+
+Problem 2 (15 points):
+Score += 15
+
+Problem 3 (10 points):
+ModuleNotFoundError: No module named 'calculator'
+
+Problem 4 (10 points):
+Score += 10
+
+Total score: 40/50 = 80.0%
+
+Linter Notes: None
+
+-------------------------------------------------------------------------------
+

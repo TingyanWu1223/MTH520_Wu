@@ -80,9 +80,9 @@ def hypot(a, b):
     Returns:
         The length of the triangle's hypotenuse.
     """
-    from calculator import sqrt, sum, product
+    import calculator as c
 
-    return sqrt(sum(product(a, a), product(b, b)))
+    return c.sqrt(c.add(c.mult(a, a), c.mult(b, b)))
 
 
 # Problem 4

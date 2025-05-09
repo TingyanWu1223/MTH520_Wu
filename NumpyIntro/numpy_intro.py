@@ -33,7 +33,7 @@ def prob3():
     """
     A = np.triu(np.ones((7, 7), dtype=np.int64))
     B = -1 * np.ones((7, 7), dtype=np.int64)
-    B += 6 * np.triu(np.ones((7, 7), dtype=np.int64))
+    B[np.triu_indices(7,k=1)] = 5
 
     ABA = A @ B @ A
     return ABA

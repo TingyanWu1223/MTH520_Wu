@@ -1,8 +1,8 @@
 # lstsq_eigs.py
 """Volume 1: Least Squares and Computing Eigenvalues.
-<Name>
-<Class>
-<Date>
+<Name>Tingyan Wu
+<Class>MTH 520
+<Date>5.9
 """
 
 import numpy as np
@@ -23,7 +23,12 @@ def least_squares(A, b):
     Returns:
         x ((n, ) ndarray): The solution to the normal equations.
     """
-    raise NotImplementedError("Problem 1 Incomplete")
+    
+    Q, R = la.qr(A, mode='economic')
+    Qt_b = Q.T @ b
+    x = la.solve_triangular(R, Qt_b)
+    return x
+
 
 # Problem 2
 def line_fit():
@@ -31,7 +36,26 @@ def line_fit():
     index for the data in housing.npy. Plot both the data points and the least
     squares line.
     """
-    raise NotImplementedError("Problem 2 Incomplete")
+    data = np.load("housing.npy")
+    years = data[:, 0]
+    prices = data[:, 1]
+    
+    A = np.column_stack((years, np.ones(len(years))))
+    b = prices
+    
+    a, b_est = least_squares(A, b)
+    
+    x_fit = np.linspace(years.min(), years.max(), 100)
+    y_fit = a * x_fit + b_est
+    
+    plt.figure(figsize=(10, 6))
+    plt.scatter(years, prices, color='black', label="Data Points")
+    plt.plot(x_fit, y_fit, color='tab:blue', linewidth=2, label="Least Squares Fit")
+    plt.title("Housing Price Index (2000-2010)")
+    plt.xlabel("Year (0 = 2000)")
+    plt.ylabel("Price Index")
+    plt.legend()
+    plt.show()
 
 
 # Problem 3
@@ -40,7 +64,33 @@ def polynomial_fit():
     the year to the housing price index for the data in housing.npy. Plot both
     the data points and the least squares polynomials in individual subplots.
     """
-    raise NotImplementedError("Problem 3 Incomplete")
+    
+    data = np.load("housing.npy")
+    years = data[:, 0]
+    prices = data[:, 1]
+
+    degrees = [3, 6, 9, 12]
+    x_fit = np.linspace(years.min(), years.max(), 500)
+
+    fig, axes = plt.subplots(2, 2, figsize=(15, 10))
+    axes = axes.flatten()
+
+    for i, degree in enumerate(degrees):
+        A = np.vander(years, degree + 1)
+        
+        coeffs = la.lstsq(A, prices)[0]
+        
+        y_fit = np.polyval(coeffs, x_fit)
+        
+        axes[i].scatter(years, prices, color='black', label='Data Points')
+        axes[i].plot(x_fit, y_fit, linewidth=2, label=f"Degree {degree} Fit")
+        axes[i].set_title(f"Polynomial Degree {degree}")
+        axes[i].set_xlabel("Year (0 = 2000)")
+        axes[i].set_ylabel("Price Index")
+        axes[i].legend()
+
+    plt.tight_layout()
+    plt.show()
 
 
 def plot_ellipse(a, b, c, d, e):

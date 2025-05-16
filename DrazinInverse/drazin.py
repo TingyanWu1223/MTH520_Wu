@@ -50,7 +50,16 @@ def is_drazin(A, Ad, k):
     Returns:
         (bool) True of Ad is the Drazin inverse of A, False otherwise.
     """
-    raise NotImplementedError("Problem 1 Incomplete")
+    if not np.allclose(np.linalg.matrix_power(A, k+1) @ Ad, np.linalg.matrix_power(A, k)):
+        return False
+    
+    if not np.allclose(Ad @ A @ Ad, Ad):
+        return False
+    
+    if not np.allclose(Ad @ A, A @ Ad):
+        return False
+    
+    return True
 
 
 # Problem 2
@@ -63,7 +72,34 @@ def drazin_inverse(A, tol=1e-4):
     Returns:
        ((n,n) ndarray) The Drazin inverse of A.
     """
-    raise NotImplementedError("Problem 2 Incomplete")
+    n = A.shape[0]
+    # Schur decomp with nonzero eigenvalues first
+    T1, Q1, k1 = la.schur(A, sort=lambda x: abs(x) > tol)
+    # Schur decomp with zero eigenvalues first
+    T2, Q2, k2 = la.schur(A, sort=lambda x: abs(x) <= tol)
+
+    # Build the change-of-basis matrix U
+    U = np.hstack([Q1[:, :k1], Q2[:, :n-k1]])
+    U_inv = la.inv(U)
+
+    # Block-diagonalize A in the new basis: V = U^{-1} A U
+    V = U_inv @ A @ U
+
+    # Construct Z: zero matrix with top-left block = inverse of M
+    Z = np.zeros_like(A)
+    if k1 > 0:
+        M = V[:k1, :k1]
+        Z[:k1, :k1] = la.inv(M)
+
+    # Transform back to original basis
+    AD = U @ Z @ U_inv
+
+    # Warn if U is ill-conditioned
+    cond_U = np.linalg.cond(U)
+    if cond_U > 1e8:
+        print(f"Warning: condition number of U is {cond_U:.2e}, result may be unstable.")
+
+    return AD
 
 
 # Problem 3
@@ -77,7 +113,14 @@ def effective_resistance(A):
         ((n,n) ndarray) The matrix where the ijth entry is the effective
         resistance from node i to node j.
     """
-    raise NotImplementedError("Problem 3 Incomplete")
+    n = A.shape[0]
+    D = np.diag(A.sum(axis=1))
+    L = D - A
+    Ld = drazin_inverse(L)
+    diag = np.diag(Ld)
+    R = diag[:, None] + diag[None, :] - 2*Ld
+    np.fill_diagonal(R, 0)
+    return R
 
 
 # Problems 4 and 5
@@ -110,7 +153,7 @@ class LinkPredictor:
         Raises:
             ValueError: If node is not in the graph.
         """
-        raise NotImplementedError("Problem 5 Incomplete"
+        raise NotImplementedError("Problem 5 Incomplete")
 
 
     def add_link(self, node1, node2):

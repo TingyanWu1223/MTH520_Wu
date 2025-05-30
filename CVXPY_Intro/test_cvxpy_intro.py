@@ -8,7 +8,17 @@ def test_prob5():
     """
     Write at least one unit test for problem 5.
     """
-    raise NotImplementedError("No code written for problem 5 unit test!!")
+    # Sets up the matrix and vector
+    A = np.array([[1, 2, 1, 1],
+                  [0, 3, -2, -1]])
+    b = np.array([7, 4])
+    
+    # Runs the prob5 function on the matrix and vector
+    x, ans = cvxpy_intro.prob5(A, b)
+    
+    # Checks for the correct vector and minimum value
+    assert np.linalg.norm(x - np.array([0.0, 1.0, 0.0, 0.0])) <= 1e-3, "Returned the wrong minimizer"
+    assert abs(ans - 5.099) <= 1e-3, "Returned the wrong minimum"
 
 def test_l1Min():
     # Sets up the matrix and vector

@@ -89,7 +89,7 @@ class SimplexSolver(object):
                 if ratio >= 0:
                     ratios.append((ratio, i))
         if not ratios:
-            return None  # Unbounded
+            return None
         min_ratio = min(ratios, key=lambda x: x[0])[0]
         eps = 1e-8
         candidates = [i for (r, i) in ratios if abs(r - min_ratio) < eps]
@@ -114,15 +114,15 @@ class SimplexSolver(object):
         """
         raise NotImplementedError("Problem 5 Incomplete")
 
-# Problem 6
-def prob6(filename='productMix.npz'):
-    """Solve the product mix problem for the data in 'productMix.npz'.
+    # Problem 6
+    def prob6(filename='productMix.npz'):
+        """Solve the product mix problem for the data in 'productMix.npz'.
 
-    Parameters:
-        filename (str): the path to the data file.
+        Parameters:
+            filename (str): the path to the data file.
 
-    Returns:
-        ((n,) ndarray): the number of units that should be produced for each product.
-    """
-    raise NotImplementedError("Problem 6 Incomplete")
+        Returns:
+            ((n,) ndarray): the number of units that should be produced for each product.
+        """
+        raise NotImplementedError("Problem 6 Incomplete")
 

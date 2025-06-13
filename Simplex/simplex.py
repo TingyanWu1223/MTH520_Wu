@@ -42,12 +42,9 @@ class SimplexSolver(object):
         if np.any(self.b < 0):
             raise ValueError("Infeasible at origin: some entries of b are negative")
             
-            
-        # Bland's Rule
         self.N = list(range(self.n))
         self.B = list(range(self.n, self.n + self.m))
         
-        #problem2
         self.dictionary = self._generatedictionary(self.c, self.A, self.b)
 
 
@@ -62,14 +59,10 @@ class SimplexSolver(object):
         """
         m, n = A.shape
         D = np.zeros((m + 1, n + m + 1))
-
-        # Objective row (row 0): value at origin = 0, then c coefficients
         D[0, 1:n+1] = c
-
-        # Constraint rows (rows 1..m)
-        D[1:, 0]        = b
-        D[1:, 1:n+1]   = A
-        D[1:, n+1:]    = np.eye(m)
+        D[1:, 0] = b
+        D[1:, 1:n+1] = A
+        D[1:, n+1: ]= np.eye(m)
 
         return D
 
@@ -91,49 +84,24 @@ class SimplexSolver(object):
         ratios = []
         for i in range(1, self.m + 1):
             a_ij = self.dictionary[i, index]
-            if a_ij > 0:
-                ratio = self.dictionary[i, 0] / a_ij
-                ratios.append((ratio, i))
-
+            if a_ij < 0:
+                ratio = -self.dictionary[i, 0] / a_ij
+                if ratio >= 0:
+                    ratios.append((ratio, i))
+        if not ratios:
+            return None  # Unbounded
         min_ratio = min(ratios, key=lambda x: x[0])[0]
         eps = 1e-8
         candidates = [i for (r, i) in ratios if abs(r - min_ratio) < eps]
-
         best_row = min(candidates, key=lambda i: self.B[i-1])
         return best_row
 
-    # Problem 4
+   # Problem 4
     def pivot(self):
         """Select the column and row to pivot on. Reduce the column to a
         negative elementary vector.
         """
-        j = self._pivot_col()
-        if j is None:
-            return
-
-        try:
-            i = self._pivot_row(j)
-        except ValueError:
-            raise ValueError("Unbounded")
-
-        D = self.dictionary
-
-        piv = D[i, j]
-        D[i, :] /= piv
-        for r in range(D.shape[0]):
-            if r != i:
-                D[r, :] -= D[r, j] * D[i, :]
-
-        varlist = self.N + self.B
-        enter_idx = j - 1 
-        leave_idx = self.n + (i - 1)
-        
-        varlist[enter_idx], varlist[leave_idx] = varlist[leave_idx], varlist[enter_idx]
- 
-        self.N = varlist[:self.n]
-        self.B = varlist[self.n:]
-
-        self.dictionary = D
+        return NotImplementedError("Problem 4 Incomplete")
 
     # Problem 5
     def solve(self):
@@ -144,28 +112,7 @@ class SimplexSolver(object):
             (dict): The basic variables and their values.
             (dict): The nonbasic variables and their values.
         """
-        while True:
-            j = self._pivot_col()
-            if j is None:
-                break
-            try:
-                self.pivot()
-            except ValueError:
-                raise ValueError("Unbounded")
-
-        D = self.dictionary
-        raw_obj = D[0, 0]
-        opt_value = round(-float(raw_obj), 10)
-
-        basic_vars = {}
-        for row in range(1, self.m + 1):
-            var_idx = self.B[row-1]
-            val = D[row, 0]
-            basic_vars[var_idx] = round(float(val), 10)
-
-        nonbasic_vars = { var: 0.0 for var in self.N }
-
-        return opt_value, basic_vars, nonbasic_vars
+        raise NotImplementedError("Problem 5 Incomplete")
 
 # Problem 6
 def prob6(filename='productMix.npz'):
@@ -178,3 +125,4 @@ def prob6(filename='productMix.npz'):
         ((n,) ndarray): the number of units that should be produced for each product.
     """
     raise NotImplementedError("Problem 6 Incomplete")
+

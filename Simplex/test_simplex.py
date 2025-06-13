@@ -7,14 +7,7 @@ def test_simplex():
     """
     Write at least one unit test for problem 5, the simplex solver.
     """
-    c = np.array([1.0])
-    A = np.array([[1.0]])
-    b = np.array([5.0])
-    solver = simplex.SimplexSolver(c, A, b)
-    opt, basic_vars, nonbasic_vars = solver.solve()
-    assert opt == 0.0
-    assert basic_vars == {1: 5.0}
-    assert nonbasic_vars == {0: 0.0}
+    raise NotImplementedError("No code written for problem 5 unit test!!")
 
 def test_simplex_example():
     # Sets up the values for the simplex problem.
@@ -25,6 +18,6 @@ def test_simplex_example():
     # Runs the simplex solver.
     solver = simplex.SimplexSolver(c, A, b)
     sol = solver.solve()
-    print(sol)
+
     # Checks if it returned the correct value
     assert sol[0] == -5.2, "Incorrect result from the simplex method"
